@@ -49,10 +49,13 @@ html, body {
 	margin-right: auto;
 }
 
-.clearfix:after {
+.clearfix:after,
+.clearfix:before {
 	content: "";
 	display: block;
-	clear: all;
+	clear: both;
+	width: 0;
+	height: 0;
 }
 
 /*Header*/
@@ -216,65 +219,81 @@ html, body {
 /*Выпадающее подменю*/
 
 .navigation-item {
-	outline: 1px solid red;
-
-	display: block;
+	display: none;
 	position: absolute;
 	list-style: none;
 	margin: 0;
 	padding: 10px 15px;
 	width: 265px;
 	min-height: 390px;
-	background: rgba(255, 255, 255, 1);
+	background: rgba(255, 255, 255, 0.8);
 }
 
 
 .navigation-item li {
-	outline: 1px solid green;
+	position: relative;
 	display: block;
-	min-width: 250px;
+	min-width: 225px;
 	min-height: 115px;
 	border-bottom: 1px solid #cacaca;
 	padding: 15px 5px;
+	overflow: hidden;
 }
 
-.navigtion-item img {
+.navigation-item img {
 	float: left;
 	width: 76px;
 	height: 76px;
-	margin-right: 5px;
 }
 
 .navigation-item .item-wrap {
-	float: right;
-	width: 160px;
+	height: 76px;
+	margin-left: 82px;
+	text-overflow: ellipsis;
 }
 
 .navigation-item h4 {
 	font-size: 16px;
-	line-height: 1.5;
+	line-height: 1;
 	margin: 0;
+	margin-bottom: 4px;
 	color: #f06470;
 	font-family: "Lato";
 }
 
 .navigation-item p {
 	font-size: 14px;
+	line-height: 1;
 	margin: 0;
 	color: #000000;
-	font-family: "Lato"
+	font-family: "Lato";
 }
 
 .navigation-item .btn {
 	box-sizing: content-box;
 	width: 65px;
-	padding:4.5px 25px;
+	padding:3px 25px 0 25px;
 	display: block;
 	text-decoration: none;
 	color: #ffffff;
 	font-size: 12px;
 	line-height: 14px;
 	margin: 0;
+	margin-top: 4px;
+	vertical-align: middle;
+}
+
+.navigation-item>a {
+	box-sizing: border-box;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 1;
+	font-family: "Lato";
+	color: #f06470;
+	margin: 0;
+	margin-top: 15px;
+	padding: 0;
+	text-align: left;
 }
 
 .navigation a:hover ~ .navigation-item {
