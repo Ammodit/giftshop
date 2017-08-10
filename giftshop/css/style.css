@@ -29,6 +29,14 @@ h3 {
 	font-weight: normal;
 }
 
+
+/*Универсальные стили для некоторых элементов*/
+
+.btn {
+	display: inline-block;
+}
+
+
 /*Универсальные стили для цветных блоков*/
 
 .pink {
@@ -53,7 +61,7 @@ h3 {
   opacity: 0.8;
 }
 
-/* /Универсальные стили для цветных блоков*/
+
 
 
 .container {
@@ -238,14 +246,21 @@ h3 {
 	position: absolute;
 	top: 75px;
 	left: 0px;
-	list-style: none;
-	margin: 0;
+	
 	padding: 10px 15px;
 	width: 265px;
 	min-height: 390px;
 	background: rgba(255, 255, 255, 0.8);
 	box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.33);
 	z-index: 10;
+}
+
+.navigation-item ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 345px;
 }
 
 
@@ -317,6 +332,7 @@ h3 {
 
 .navigation-item>a:hover {
 	border-bottom: 1px solid #f06470;
+	background: none;
 }
 
 
@@ -433,11 +449,68 @@ h3 {
 
 /*Стили для стикеров на промо*/
 
-.promo-item-label {
-	display: none;
- 	width: 0;
- 	height: 0;
+.promo-label {
 	position: absolute;
+	padding: 10px;
+	background-color: rgb(54, 42, 79);
+	opacity: 0.8;
+	z-index: 32;
+	
+}
+
+.promo-item .men {
+	width: 348px;
+	min-height: 105px;
+	left: 0;
+	top: 410px;
+}
+
+.promo-item .women{
+	width: 267px;
+	min-height: 82px;
+	left: 0;
+	top: 229px;
+/*	padding: 0;*/
+}
+
+.promo-label span {
+	text-transform: uppercase;
+	color: #ef5966;
+	line-height: 1;
+	font-weight: bold;
+}
+
+.men span {
+	font-size: 53px;
+
+}
+
+.women span {
+	font-size: 25px;
+}
+
+.promo-label p {
+	margin: 0;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.promo-item .pink {
+	width: 348px;
+	background-color: #ef5966;
+	opacity: 1;
+	font-weight: bold;
+	min-height: 40px;
+	padding: 5px 10px;
+	left: 0;
+	top: 521px;
+	/*margin-top: 125px;*/
+}
+
+.promo-item .pink p {
+	font-size: 18px;
 }
 
 .addtocart-label {
@@ -446,6 +519,33 @@ h3 {
 	height: 0;
 	position: absolute;
 }
+
+
+
+/*Cтили на ярлык корзины*/
+
+.promo-wrpap {
+	display: none;
+	
+}
+
+.kids:hover .promo-wrap {
+	cursor: pointer;
+	position: absolute;
+	display: block;
+	width: 495px;
+	height: 244px;
+	top: 0;
+	left: 0;
+	background-color: rgb(0, 0, 0);
+	opacity: 0.588;
+	z-index: 20;
+}
+
+.kids .addtocart-label {
+	display: none;
+}
+
 
 /* /promo*/
 
@@ -495,12 +595,11 @@ h3 {
 	min-width: 144px;
 }
 
-.btns, .btn {
-	margin-bottom: 0;
-	display: inline-block;
+.section-title .btn {
 	height: 80px;
 	width: 70px;
 }
+
 
 /*Новинки*/
 
