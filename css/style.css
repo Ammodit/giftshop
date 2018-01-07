@@ -21,6 +21,22 @@ img {
 	margin: 0;
 }
 
+h3 {
+	font-size: 25px;
+	color: #434343;
+	text-transform: uppercase;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+
+/*Универсальные стили для некоторых элементов*/
+
+.btn {
+	display: inline-block;
+}
+
+
 /*Универсальные стили для цветных блоков*/
 
 .pink {
@@ -29,6 +45,7 @@ img {
 
 .blue {
 	background-color: #05aecc;
+	color: #ffffff;
 }
 
 .dark-blue {
@@ -44,7 +61,7 @@ img {
   opacity: 0.8;
 }
 
-/* /Универсальные стили для цветных блоков*/
+
 
 
 .container {
@@ -229,14 +246,21 @@ img {
 	position: absolute;
 	top: 75px;
 	left: 0px;
-	list-style: none;
-	margin: 0;
+	
 	padding: 10px 15px;
 	width: 265px;
 	min-height: 390px;
 	background: rgba(255, 255, 255, 0.8);
 	box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.33);
-	z-index: 10;
+	z-index: 2;
+}
+
+.navigation-item ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 345px;
 }
 
 
@@ -308,6 +332,7 @@ img {
 
 .navigation-item>a:hover {
 	border-bottom: 1px solid #f06470;
+	background: none;
 }
 
 
@@ -319,10 +344,9 @@ img {
 /*Промо*/
 
 .promo {
-	outline: 2px solid red;
-
 	width: 1170px;
 	height: 1085px;
+	margin-bottom: 25px;
 }
 
 .promo-item {
@@ -351,6 +375,7 @@ img {
 	float: right;
 }
 
+/*Строка поиска*/
 
 .search-field {
 	height: 170px;
@@ -359,6 +384,7 @@ img {
 }
 
 .search-field form {
+	position: relative;
 	height: 100%;
 }
 
@@ -366,6 +392,7 @@ img {
 	height: 100%;
 	width: 86%;
 	padding-left: 20px;
+	padding-right: 225px;
 	margin: 0;
 	border: none;
 	box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.19)
@@ -373,6 +400,7 @@ img {
 
 .search-field input[type="search"]:focus {
 	outline: none;
+	box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.5)
 }
 
 .search-field input[type="submit"] {
@@ -380,30 +408,451 @@ img {
 	padding: 0;
 	margin: 0;
 	border: 0;
-	background-color: : none;
 	font-size: 0;
 	height: 100%;
 	width: 14%;
 	cursor: pointer;
-	background: url("img/search_icon.png") no-repeat;
+	background: url("../img/search_icon.png") no-repeat center center;
+	z-index: 1;
+}
+
+.search-field input[type="submit"]:focus {
+	outline: none;
+}
+
+.search-field span {
+	position: absolute;
+	width: 225px;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	color: #c6c6c6;
+	font-size: 17px;
+	top: 24px;
+	left: 186px;
+}
+
+.search-field input[type="search"]:focus ~ span {
+	display: none;
+}
+
+ ::-webkit-input-placeholder {
+	color: #000000;
+	font-size: 16px;
+	font: 'Lato';
+}
+
+:focus::-webkit-input-placeholder {
+	color: transparent;
 }
 
 
 /*Стили для стикеров на промо*/
 
-.promo-item-label {
- 	width: 0;
- 	height: 0;
+.promo-label {
 	position: absolute;
+	padding: 10px;
+	background-color: rgb(54, 42, 79);
+	opacity: 0.8;
+	z-index: 1;
+	
+}
+
+.promo-item .men {
+	width: 348px;
+	min-height: 105px;
+	left: 0;
+	top: 410px;
+}
+
+.promo-item .women{
+	width: 267px;
+	min-height: 82px;
+	left: 0;
+	top: 229px;
+/*	padding: 0;*/
+}
+
+.promo-label span {
+	text-transform: uppercase;
+	color: #ef5966;
+	line-height: 1;
+	font-weight: bold;
+}
+
+.men span {
+	font-size: 53px;
+
+}
+
+.women span {
+	font-size: 25px;
+}
+
+.promo-label p {
+	margin: 0;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.promo-item .pink {
+	width: 348px;
+	background-color: #ef5966;
+	opacity: 1;
+	font-weight: bold;
+	min-height: 40px;
+	padding: 5px 10px;
+	left: 0;
+	top: 521px;
+	/*margin-top: 125px;*/
+}
+
+.promo-item .pink p {
+	font-size: 18px;
 }
 
 .addtocart-label {
-	width: 0;
-	height: 0;
+	width: auto;
+	height: 55px;
 	position: absolute;
+	vertical-align: middle;
+}
+
+.addtocart-label p {
+	float: left;
+	display: block;
+	height: 100%;
+	margin: 0;
+	padding-top: 17px;
+	padding-left: 10px;
+	padding-right: 5px;
+	letter-spacing: 2px;
+}
+
+.addtocart-label .gift,
+.addtocart-label .cart,
+.addtocart-label .price {
+	display: block;
+	float: left;
+	width: 51px;
+	height: 54px;
+	margin: 0;
+}
+
+.addtocart-label .cart {
+	width: 53px;
+}
+
+.addtocart-label .price {
+	width: auto;
+	padding-top: 15px;
+	padding-left: 18px;
+	padding-right: 12px;
+	letter-spacing: 2px;
+}
+
+.addtocart-label .price sup {
+	vertical-align: top;
+	letter-spacing: 0px;
+	font-size: 10px;
 }
 
 
 
 
+
+
+/*Cтили на ярлык корзины*/
+
+.promo-wrpap {
+	display: none;
+	
+}
+
+.kids:hover .promo-wrap {
+	cursor: pointer;
+	position: absolute;
+	display: block;
+	width: 495px;
+	height: 244px;
+	top: 0;
+	left: 0;
+	background-color: rgb(0, 0, 0);
+	opacity: 0.588;
+	z-index: 2;
+}
+
+.kids .addtocart-label {
+	display: none;
+	
+
+}
+
+
+.kids:hover .addtocart-label {
+	display: block;
+	position: absolute;
+	right: 0px;
+	bottom: 26px;
+	width: 292px;
+	height: 54px;
+	z-index: 3;
+
+
+}
+
+/* /promo*/
+
+
+/*.catalog-new*/
+
+/*Заголовки секций и кнопки переключения*/
+
+.catalog-new {
+	margin-bottom: 23px;
+}
+
+.section-title {
+	position: relative;
+	width: 100%;
+	margin-bottom: 25px;
+	min-height: 80px;
+	padding-top: 0.000000001px;
+}
+
+.section-title:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background: #b9b9b9;
+	bottom: 0px;
+	left: 0;
+	z-index: -1;
+}
+
+.section-title h2 {
+	float: left;
+	width: auto;
+	margin: 0;
+	margin-left: 30px;
+	margin-top: 24px;
+	padding: 10px 0;
+	font-size: 30px;
+	color: #00a1be;
+	border-bottom: 1px solid #f0626e;
+}
+
+.section-title .btns {
+	float: right;
+	height: 80px;
+	min-width: 144px;
+}
+
+.section-title .btn {
+	height: 80px;
+	width: 70px;
+}
+
+
+/*Новинки*/
+
+.catalog-new-item {
+	display: inline-block;
+	width: 370px;
+	min-height: 200px;
+	margin-right: 26px;
+}
+
+.catalog-new-item:last-of-type {
+	margin-right: 0;
+}
+
+
+/*Популярное*/
+
+.catalog-featured-item {
+	position: relative;
+	float: left;
+	width: 270px;
+	height: 400px;
+	margin-right: 30px;
+}
+
+.catalog-featured-item:last-of-type {
+	margin-right: 0;
+}
+
+.featured-item-label {
+	position: absolute;
+	display: none;
+}
+
+
+
+/*О нас*/
+
+.about p {
+	font-size: 16px;
+	line-height: 26px;
+	color: #464646;
+	text-align: left;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.about-item {
+/*	height: 230px;*/
+	margin-top: 30px;
+	font-size: 0;
+	line-height: 0;
+	vertical-align: top;
+}
+
+.about-btns {
+	width: 370px;
+	height: 230px;
+	margin-right:30px;
+	vertical-align: top;
+}
+
+.about-btns:nth-child(3) {
+	margin-right: 0;
+}
+
+.about-btns a {
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	padding-left: 210px;
+	padding-top: 85px;
+}
+
+.about-btns:nth-child(3) a {
+	padding-top: 95px;
+}
+
+.about-btns span {
+	font-size: 29px;
+	line-height: 30px;
+	color: #ffffff;
+}
+
+.register-btn {
+	display: block;
+	width: 645px;
+	height: 60px;
+	margin: 30px auto;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 28px;
+	line-height: 23.5px;
+	text-align: center;
+	padding-top: 19px;
+}
+
+/*Футер*/
+
+footer {
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+
+/*Верхняя часть футера*/
+
+.footer-top {
+
+	min-height: 426px;
+	border-top: 1px solid #b9b9b9;
+	border-bottom: 1px solid #b9b9b9;
+}
+
+.footer-column {
+
+	float: left;
+	width: 219px;
+	margin-right: 33px;
+	color: #676767;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: left;
+}
+
+.footer-column:first-of-type {
+	width: 257px;
+}
+
+.footer-column:last-of-type {
+	width: 376px;
+	margin-right: 0;
+}
+
+.footer-column ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-column ul a {
+	text-decoration: none;
+	color: #676767;
+}
+
+.footer-column ul a:hover {
+	opacity: 0.7;
+}
+
+.column-item input[type="email"] {
+	width: 100%;
+	height: 70px;
+	border: 1px solid #dedede;
+	text-align: center;
+	font-size: 14px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #474747;
+	margin: 0;
+}
+
+.column-item input[type="submit"] {
+	width: 100%;
+	height: 50px;
+	margin: 0;
+	border: none;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+
+
+
+/*Нижняя часть футера*/
+
+.footer-bottom {
+	min-height: 65px;
+	border-bottom: 1px solid #b9b9b9;
+	color: #434343;
+	font-size: 14px;
+	line-height: 30px;
+	margin-bottom: 50px;
+	padding-top: 5px;
+}
+
+.footer-bottom p:first-child {
+	float: left;
+}
+
+.footer-bottom p:last-child {
+	float: right;
+}
+
+.footer-bottom a {
+	text-decoration: none;
+	color: #f0626e;
+}
 
