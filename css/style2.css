@@ -29,6 +29,16 @@ h3 {
 	text-transform: uppercase;
 	line-height: 30px;
 	font-weight: normal;
+	margin: 0;
+}
+
+h4 {
+	font-size: 18px;
+	letter-spacing: 2px;
+	color: #505050;
+	margin: 0;
+	line-height: 1;
+	font-weight: normal;
 }
 
 
@@ -74,8 +84,22 @@ h3 {
 
 
 /*Стикер с ценой и корзиной*/
+.price {
+	width: auto;
+	padding-top: 10px;
+	padding-left: 18px;
+	padding-right: 12px;
+	letter-spacing: 2px;
+}
+
+.price sup {
+	vertical-align: top;
+	letter-spacing: 0px;
+	font-size: 12px;
+}
 
 .addtocart-label {
+	display: none;
 	width: auto;
 	height: 54px;
 	position: absolute;
@@ -120,6 +144,8 @@ h3 {
 	letter-spacing: 0px;
 	font-size: 10px;
 }
+
+
 
 /*Стили заголовков*/
 .section-title {
@@ -621,6 +647,7 @@ h3 {
 }
 
 .crafts .addtocart-label {
+	display: block;
 	right: 0;
 	bottom: 0;
 }
@@ -747,6 +774,7 @@ h3 {
 }
 
 .catalog-new-item {
+	position: relative;
 	display: inline-block;
 	width: 370px;
 	min-height: 200px;
@@ -757,6 +785,30 @@ h3 {
 	margin-right: 0;
 }
 
+.catalog-new-item .catalog-new-wrap {
+	display: none;
+}
+
+.catalog-new-item:hover .catalog-new-wrap {
+	cursor: pointer;
+	position: absolute;
+	display: block;
+	width: 370px;
+	min-height: 200px;
+	top: 0;
+	left: 0;
+	background-color: rgb(54, 42, 79);
+	opacity: 0.878;
+	z-index: 2;
+}
+
+.catalog-new-item:hover .addtocart-label {
+	display: block;
+	position: absolute;
+	left: 39px;
+	bottom: 72px;
+	z-index: 3;
+}
 
 /*популярное*/
 
@@ -766,16 +818,103 @@ h3 {
 	width: 270px;
 	height: 400px;
 	margin-right: 30px;
+	outline: 1px solid #bbbbbb;
 }
 
 .catalog-featured-item:last-of-type {
 	margin-right: 0;
 }
 
+
+.sale::before {
+	content: '20% off';
+	position: absolute;
+	left: 0;
+	top: 13px;
+	width: 80px;
+	height: 34px;
+	background-color: #f0626e;
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 1;
+	margin: 0;
+	text-align: center;
+	padding-top: 10px;
+	
+}
+
+.new::before {
+	content: 'New';
+	position: absolute;
+	left: 0;
+	top: 13px;
+	width: 80px;
+	height: 34px;
+	background-color: #05aecc;
+	font-size: 14px;
+	line-height: 1;
+	margin: 0;
+	text-align: center;
+	padding-top: 10px;
+	
+}
+
+
+
+
+
 .featured-item-label {
 	position: absolute;
-	display: none;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 108px;
+	background-color: #ffffff;
+	padding: 0;
 }
+
+.featured-item-label .top {
+	width: 100%;
+	height: 56px;
+	padding: 13px;
+}
+
+.featured-item-label .text-pink,
+.featured-item-label .text-blue {
+	color: #f0626e;
+	margin: 0;
+	margin-top: 3px;
+	line-height: 1;
+	font-size: 13px;
+	letter-spacing: 2px;
+}
+
+.featured-item-label .text-blue {
+	color: #05aecc;
+}
+
+.featured-item-label .bottom {
+	width: 100%;
+	height: 50px;
+}
+
+.featured-item-label .bottom .itm {
+	display: block;
+	float: left;
+	margin: 0;
+	height: 52px;
+	width: 56px;
+	outline: 1px solid #bbbbbb;
+
+}
+
+.featured-item-label .bottom .price {
+	width: 102px;
+	font-size: 24px;
+	letter-spacing: normal;
+}
+
+
 
 
 /*О нас*/
@@ -857,6 +996,7 @@ footer {
 	min-height: 426px;
 	border-top: 1px solid #b9b9b9;
 	border-bottom: 1px solid #b9b9b9;
+	padding-top: 55px;
 }
 
 .footer-column {
@@ -883,6 +1023,7 @@ footer {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	margin-top: 45px;
 }
 
 .footer-column ul a {
@@ -894,6 +1035,9 @@ footer {
 	opacity: 0.7;
 }
 
+
+/*подписка*/
+
 .column-item input[type="email"] {
 	width: 100%;
 	height: 70px;
@@ -904,6 +1048,7 @@ footer {
 	text-transform: uppercase;
 	color: #474747;
 	margin: 0;
+	margin-top: 55px;
 }
 
 .column-item input[type="submit"] {
@@ -913,7 +1058,44 @@ footer {
 	border: none;
 	font-size: 14px;
 	text-transform: uppercase;
+	margin-bottom: 30px;
 }
+
+/*соцсети*/
+
+.socio-btn {
+	display: block;
+	float: left;
+	width: 54px;
+	height: 54px;
+	margin-right: 10px;
+	margin-top: 20px;
+}
+
+.rss {
+	background-color: #f8bc2e;
+}
+
+.fb {
+	background-color: #39599f;
+}
+
+.tw {
+	background-color: #45b0e3;
+}
+
+.fl {
+	border: 1px solid #dbdbdb;
+}
+
+.gl {
+	background-color: #1872bf;
+	margin-right: 0;
+}
+
+
+
+
 
 
 
