@@ -73,6 +73,10 @@ h4 {
 	background-color: #00a1be;
 }
 
+.light-grey {
+	background-color: #434343;
+}
+
 .grey {
 	background-color: #323232;
 }
@@ -129,6 +133,13 @@ h4 {
 
 .addtocart-label .cart {
 	width: 53px;
+	background-image: url(../img/spritesheet.png);
+	background-position: -13px -1345px;
+}
+
+.addtocart-label .gift {
+	background-image: url(../img/spritesheet.png);
+	background-position: -11px -1560px;
 }
 
 .addtocart-label .price {
@@ -188,9 +199,17 @@ h4 {
 .section-title .btn {
 	height: 80px;
 	width: 70px;
+	background-image: url(../img/spritesheet.png);
 }
 
 
+.section-title .prev {
+	background-position: 0px -350px;	
+}
+
+.section-title .next {
+	background-position: 5px -955px;
+}
 
 
 
@@ -311,18 +330,20 @@ h4 {
 
 /*Иконки в меню*/
 .menu-bottom li:nth-child(3) a:after {
-	outline: 1px solid black;
+
 	content: '';
 	display: block;
 	position: absolute;
-	right: 15px;
+	right: 17px;
 	top: 30px;
 	width: 23px;
 	height: 25px;
+	background-image: url('../img/spritesheet.png');
+	background-position: -25px -1500px;
 }
 
 .menu-bottom li:nth-child(4) a:after {
-	outline: 1px solid black;
+
 	content: '';
 	display: block;
 	position: absolute;
@@ -330,6 +351,8 @@ h4 {
 	top: 33px;
 	width: 28px;
 	height: 24px;
+	background-image: url('../img/spritesheet.png');
+	background-position: -25px -1288px;
 }
 
 /* /Header*/
@@ -905,13 +928,26 @@ h4 {
 	height: 52px;
 	width: 56px;
 	outline: 1px solid #bbbbbb;
+	background-image: url(../img/spritesheet.png);
+}
 
+.featured-item-label .sorting {
+	background-position: -7px -298px;
+}
+
+.featured-item-label .gift {
+	background-position: -4px -235px;
+}
+
+.featured-item-label .cart {
+	background-position: -7px -436px;
 }
 
 .featured-item-label .bottom .price {
 	width: 102px;
 	font-size: 24px;
 	letter-spacing: normal;
+	background-image: none;
 }
 
 
@@ -937,6 +973,7 @@ h4 {
 }
 
 .about-btns {
+	position: relative;
 	width: 370px;
 	height: 230px;
 	margin-right:30px;
@@ -966,6 +1003,28 @@ h4 {
 	font-size: 29px;
 	line-height: 30px;
 	color: #ffffff;
+}
+
+.about-btns::before {
+	content: '';
+	position: absolute;
+	width: 150px;
+	height: 165px;
+	left: 40px;
+	top: 39px;
+	background-image: url(../img/spritesheet.png);
+}
+
+.about-item .light-grey::before {
+	background-position: -25px -525px;
+}
+
+.about-item .blue::before {
+	background-position: -25px -1065px;
+}
+
+.about-item .pink::before {
+	background-position: -15px -764px;
 }
 
 .register-btn {
@@ -1070,27 +1129,33 @@ footer {
 	height: 54px;
 	margin-right: 10px;
 	margin-top: 20px;
+	background-image: url(../img/spritesheet.png);
 }
 
 .rss {
 	background-color: #f8bc2e;
+	background-position: -9px -162px;
 }
 
 .fb {
 	background-color: #39599f;
+	background-position: -5px -13px;
 }
 
 .tw {
 	background-color: #45b0e3;
+	background-position: -15px -1638px;
 }
 
 .fl {
 	border: 1px solid #dbdbdb;
+	background-position: -14px -1418px; 
 }
 
 .gl {
 	background-color: #1872bf;
 	margin-right: 0;
+	background-position: -6px -88px;
 }
 
 

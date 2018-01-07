@@ -1,0 +1,107 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-Facebook {
+    width: 14px;
+    height: 28px;
+    background-position: -25px -25px;
+}
+
+.sprite-Google {
+    width: 15px;
+    height: 23px;
+    background-position: -25px -103px;
+}
+
+.sprite-Rss {
+    width: 24px;
+    height: 24px;
+    background-position: -25px -176px;
+}
+
+.sprite-grey-gift {
+    width: 15px;
+    height: 17px;
+    background-position: -25px -250px;
+}
+
+.sprite-grey-arrows {
+    width: 19px;
+    height: 12px;
+    background-position: -25px -317px;
+}
+
+.sprite-left-arrow {
+    width: 15px;
+    height: 24px;
+    background-position: -25px -379px;
+}
+
+.sprite-grey-cart {
+    width: 17px;
+    height: 15px;
+    background-position: -25px -453px;
+}
+
+.sprite-choose-products {
+    width: 144px;
+    height: 182px;
+    background-position: -25px -518px;
+}
+
+.sprite-checkout {
+    width: 130px;
+    height: 182px;
+    background-position: -25px -750px;
+}
+
+.sprite-right-arrow {
+    width: 15px;
+    height: 24px;
+    background-position: -25px -982px;
+}
+
+.sprite-register {
+    width: 142px;
+    height: 182px;
+    background-position: -25px -1056px;
+}
+
+.sprite-cart-white {
+    width: 28px;
+    height: 24px;
+    background-position: -25px -1288px;
+}
+
+.sprite-cart_2 {
+    width: 28px;
+    height: 24px;
+    background-position: -25px -1362px;
+}
+
+.sprite-flickr {
+    width: 30px;
+    height: 14px;
+    background-position: -25px -1436px;
+}
+
+.sprite-gift_1 {
+    width: 23px;
+    height: 25px;
+    background-position: -25px -1500px;
+}
+
+.sprite-gift_2 {
+    width: 23px;
+    height: 25px;
+    background-position: -25px -1575px;
+}
+
+.sprite-twitter {
+    width: 32px;
+    height: 24px;
+    background-position: -25px -1650px;
+}
